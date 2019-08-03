@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 
-html = open("https://flatironschool.com/")
+doc = Nokogirl::HTML(open("https://flatironschool.com/")
+doc.css(".site-header_hero_headline").text 
 
-
-
+puts doc.css(".site-header_hero_headline")
